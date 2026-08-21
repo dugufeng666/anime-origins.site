@@ -58,7 +58,8 @@ export interface SiteConfig {
 export const site: SiteConfig = {
   name: 'Anime Origins Wiki',
   shortName: 'AO Wiki',
-  description: 'Anime Origins wiki with guides, codes, tier lists, units, and launch coverage.',
+  description:
+    'Anime Origins wiki with fast-launch guides, codes, tier lists, units, traits, current Discord links, and launch-window coverage for Roblox players.',
   domain: 'anime-origins.site',
   tagline: 'Fast Anime Origins pages for the first search window',
   legalNotice: 'Anime Origins Wiki is a fan-made community site. Not affiliated with any game developer.',
