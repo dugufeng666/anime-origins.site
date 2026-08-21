@@ -126,13 +126,13 @@
   },
   "home": {
     "meta": {
-      "title": "Anime Origins Wiki - Guides, Codes, Tier Lists, Units & More",
-      "description": "Anime Origins wiki with fast-launch guides, codes, tier lists, units, traits, current Discord links, and launch-window coverage for Roblox players."
+      "title": "Anime Origins - Codes, Tier List, Traits & Beginner Guide",
+      "description": "Anime Origins guides for Roblox players, including active codes, unit tier lists, trait reroll advice, beginner progression, units, updates, and Discord links."
     },
     "hero": {
-      "badge": "Anime Origins Wiki",
-      "title": "Anime Origins Wiki",
-      "description": "A lean launch shell for Anime Origins guides, codes, tier lists, units, and update pages.",
+      "badge": "Roblox Tower Defense Guide",
+      "title": "Anime Origins",
+      "description": "Find active codes, current unit rankings, trait reroll advice, beginner progression tips, and the latest Anime Origins updates.",
       "ctaPrimary": "Play on Roblox",
       "ctaSecondary": "Browse Guides"
     },

@@ -31,6 +31,8 @@ interface Props {
   /** Article dates for og article:published/modified_time — forwarded to BaseLayout. */
   articlePublished?: Date;
   articleModified?: Date;
+  /** Override the global title suffix for pages such as the homepage. */
+  titleSuffix?: string;
 }
 const { locale, availableLocales, ...rest } = Astro.props;
 const currentPath = Astro.url.pathname;
