@@ -1,0 +1,345 @@
+{
+  "$schema": "../../docs/home.schema.json",
+  "site": {
+    "name": "Anime Origins Wiki",
+    "shortName": "AO Wiki",
+    "description": "Anime Origins wiki with guides, codes, tier lists, units, and launch coverage.",
+    "tagline": "Fast Anime Origins pages for the first search window",
+    "legalNotice": "Anime Origins Wiki is a fan-made community site. Not affiliated with any game developer."
+  },
+  "nav": {
+    "home": "Home",
+    "guides": "Guides",
+    "codes": "Codes",
+    "units": "Units",
+    "events": "Events",
+    "toggleTheme": "Toggle theme",
+    "menu": "Menu",
+    "close": "Close",
+    "search": "Search",
+    "language": "Language"
+  },
+  "search": {
+    "placeholder": "Search the wiki...",
+    "noResults": "No matches found"
+  },
+  "shared": {
+    "lastUpdated": "Last updated",
+    "publishedOn": "Published",
+    "noArticles": "No articles yet. Check back soon!",
+    "relatedArticles": "Related Articles",
+    "onThisPage": "On this page",
+    "browseAll": "Browse all",
+    "viewAll": "View all",
+    "commentsHeading": "Comments",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "copied": "Copied!",
+    "consentText": "We use cookies for analytics and ads to keep this site free.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "consentTitle": "Cookies",
+    "codesTable": {
+      "active": "Active Codes",
+      "expired": "Expired Codes",
+      "reward": "Reward",
+      "expires": "Expires",
+      "source": "Source",
+      "code": "Code"
+    },
+    "codesFaq": [
+      {
+        "question": "How do I redeem codes?",
+        "answer": "Open the game, find the redeem or settings menu, paste the code exactly as shown, and confirm."
+      },
+      {
+        "question": "Why do codes stop working?",
+        "answer": "Most codes expire on a schedule set by the developer or become one-time use after a patch window."
+      },
+      {
+        "question": "How often are new codes released?",
+        "answer": "New codes often appear around updates, collabs, milestones, or launch events. Check the page after each major change."
+      },
+      {
+        "question": "Do codes expire?",
+        "answer": "Yes. Expiry is normal, so the active table should always be treated as the current snapshot."
+      }
+    ],
+    "possiblyOutdated": "This guide was last checked on",
+    "outdatedNote": "— the game may have changed since. Some details could be out of date.",
+    "prevArticle": "Previous",
+    "nextArticle": "Next",
+    "minuteRead": "min read",
+    "wasThisHelpful": "Was this helpful?",
+    "feedbackThanks": "Thanks for the feedback!",
+    "relatedVideos": "Related videos",
+    "gallery": "Gallery",
+    "gameVersion": "Game version",
+    "allTags": "All Tags",
+    "tagsIndexDescription": "Browse all articles by topic.",
+    "articlesCount": "articles",
+    "recentTitle": "Recent Updates",
+    "recentDescription": "The latest articles and updates across the wiki, newest first.",
+    "sponsorTitle": "Support this wiki",
+    "sponsorText": "If these guides helped you, consider supporting the site.",
+    "sponsorButton": "Support us",
+    "notFoundSearchHint": "Try searching the wiki instead.",
+    "notFoundPopular": "Popular pages",
+    "galleryLabels": {
+      "close": "Close",
+      "prev": "Previous image",
+      "next": "Next image"
+    },
+    "quickAnswer": "Quick Answer",
+    "skipToContent": "Skip to content",
+    "tapToCopy": "Tap to copy",
+    "open": "Open",
+    "playVideo": "Play video",
+    "closeAd": "Close ad",
+    "adLabel": "Advertisement",
+    "codesFaqTitle": "Codes FAQ",
+    "toggleTheme": "Toggle theme",
+    "fallbackNotice": "English fallback",
+    "copyQuickAnswer": "Copy quick answer",
+    "feedbackYes": "Yes",
+    "feedbackNo": "No",
+    "breadcrumbAria": "Breadcrumb",
+    "paginationAria": "Article pagination"
+  },
+  "overview": {
+    "guides": {
+      "overviewTitle": "All Guides",
+      "overviewDescription": "Beginner walkthroughs, wiki hubs, leveling tips, traits, and Discord / Roblox help for Anime Origins."
+    },
+    "codes": {
+      "overviewTitle": "All Codes",
+      "overviewDescription": "Active reward codes, redemption steps, and expired-code tracking for Anime Origins."
+    },
+    "units": {
+      "overviewTitle": "All Units & Tier Lists",
+      "overviewDescription": "Ranked units, secret-unit notes, best teams, and role-based tier lists for Anime Origins."
+    },
+    "events": {
+      "overviewTitle": "All Events",
+      "overviewDescription": "Patch events, collabs, launch spikes, and time-sensitive Anime Origins coverage."
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Anime Origins Wiki - Guides, Codes, Tier Lists, Units & More",
+      "description": "A fast-launch Anime Origins wiki for guides, codes, tier lists, units, and launch-window coverage."
+    },
+    "hero": {
+      "badge": "Anime Origins Wiki",
+      "title": "Anime Origins Wiki",
+      "description": "A lean launch shell for Anime Origins guides, codes, tier lists, units, and update pages.",
+      "ctaPrimary": "Play on Roblox",
+      "ctaSecondary": "Browse Guides"
+    },
+    "updates": {
+      "title": "Recent Updates"
+    },
+    "start": {
+      "badge": "Start Here",
+      "title": "Pick a starting lane",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Anime Origins Beginner Guide",
+          "description": "Start with the early-game path, first upgrades, and what to unlock before you spend hard currency.",
+          "icon": "lucide:book-open",
+          "href": "/guides/anime-origins-beginner-guide"
+        },
+        {
+          "number": "2",
+          "title": "Anime Origins Codes",
+          "description": "Check the current reward table before you spend time searching anywhere else.",
+          "icon": "lucide:gift",
+          "href": "/codes/anime-origins-codes"
+        },
+        {
+          "number": "3",
+          "title": "Anime Origins Tier List",
+          "description": "Check ranked unit pages before you spend resources or build a team around the wrong carry.",
+          "icon": "lucide:list-ordered",
+          "href": "/units/anime-origins-tier-list"
+        },
+        {
+          "number": "4",
+          "title": "Anime Origins Wiki",
+          "description": "Open the hub page when you want the fastest map of the whole site.",
+          "icon": "lucide:book-marked",
+          "href": "/guides/anime-origins-wiki"
+        }
+      ]
+    },
+    "popular": {
+      "badge": "Trending Now",
+      "title": "High-Intent Pages",
+      "quickLinks": [
+        {
+          "label": "Anime Origins Units",
+          "href": "/units/anime-origins-units"
+        },
+        {
+          "label": "Anime Origins Roblox",
+          "href": "/guides/anime-origins-roblox"
+        },
+        {
+          "label": "Anime Origins Discord",
+          "href": "/guides/anime-origins-discord"
+        },
+        {
+          "label": "Anime Origins Traits",
+          "href": "/guides/anime-origins-traits"
+        }
+      ]
+    },
+    "explore": {
+      "title": "Explore Anime Origins",
+      "description": "Pick the page type that matches the search intent and publish fast.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Guides",
+          "description": "Beginner walkthroughs, wiki hubs, Discord help, and progression paths for Anime Origins.",
+          "href": "/guides",
+          "displayType": "steps",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Open the game and learn the first menu path"
+            },
+            {
+              "label": "2",
+              "detail": "Spend early resources only after the first checkpoint"
+            },
+            {
+              "label": "3",
+              "detail": "Add the first team upgrade or class choice"
+            },
+            {
+              "label": "4",
+              "detail": "Move into the next guide page"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Codes",
+          "description": "Fast reward pages for active codes, expired codes, and redemption help.",
+          "href": "/codes",
+          "displayType": "badge-list",
+          "highlights": [
+            {
+              "label": "Anime Origins",
+              "detail": "Code tracking and reward notes",
+              "badge": "Live"
+            },
+            {
+              "label": "Expired",
+              "detail": "Keep old codes visible for reference"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Units & Tier Lists",
+          "description": "Ranked pages, secret-unit notes, and role-based build guidance for Anime Origins.",
+          "href": "/units",
+          "displayType": "ranked-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Top carry, must-build unit"
+            },
+            {
+              "label": "A",
+              "detail": "Strong pick, flexible lineup fit"
+            },
+            {
+              "label": "B",
+              "detail": "Usable if the roster is small"
+            },
+            {
+              "label": "C",
+              "detail": "Early filler or niche option"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Events",
+          "description": "Time-sensitive coverage for collabs, patches, launch spikes, and update notes.",
+          "href": "/events",
+          "displayType": "timeline",
+          "highlights": [
+            {
+              "label": "Today",
+              "detail": "Current event or spike window",
+              "badge": "Now"
+            },
+            {
+              "label": "This week",
+              "detail": "Fresh guide and code follow-up"
+            },
+            {
+              "label": "Patch window",
+              "detail": "Balance changes and reward updates"
+            },
+            {
+              "label": "Collab watch",
+              "detail": "Limited-time crossover coverage"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Quick answers for new visitors.",
+      "items": [
+        {
+          "question": "What is Anime Origins Wiki?",
+          "answer": "It is a fan-made wiki for Anime Origins, built to publish fast guide, code, unit, and event pages."
+        },
+        {
+          "question": "Which game does it cover?",
+          "answer": "The current focus is Anime Origins, and the site is organized around guides, codes, units, traits, and launch pages."
+        },
+        {
+          "question": "How often do pages update?",
+          "answer": "The goal is to update high-intent pages quickly around new spikes, patches, and code drops."
+        },
+        {
+          "question": "Where should I start?",
+          "answer": "Start with the beginner guide, then move to codes, units, the wiki hub, and the Discord page."
+        },
+        {
+          "question": "Is this official?",
+          "answer": "No. This is a fan-made wiki hub and is not affiliated with any game developer."
+        }
+      ]
+    },
+    "closingCta": {
+      "title": "Keep Anime Origins focused",
+      "description": "Publish the next useful page, keep the search intent clean, and add a new cluster only when the signal justifies it.",
+      "primary": "Browse Guides"
+    }
+  },
+  "footer": {
+    "playGame": "Play on Roblox",
+    "officialDiscord": "Discord",
+    "officialYoutube": "YouTube",
+    "officialTwitter": "X",
+    "officialReddit": "Reddit",
+    "about": "About",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "Copyright",
+    "copyrightText": "© 2026 Anime Origins Wiki. Fan-made, not affiliated with any game developer.",
+    "community": "Community",
+    "legal": "Legal"
+  }
+}

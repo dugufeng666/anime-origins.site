@@ -1,0 +1,103 @@
+#!/usr/bin/env node
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { Command } from 'commander';
+import { doctorCommand } from '../cli/commands/doctor.js';
+import { metricsCommand } from '../cli/commands/metrics.js';
+import { auditCommand } from '../cli/commands/audit.js';
+import { insightsCommand } from '../cli/commands/insights.js';
+import { submitCommand } from '../cli/commands/submit.js';
+import { OpsError } from '../core/errors.js';
+
+const pkg = JSON.parse(readFileSync(fileURLToPath(new URL('../../package.json', import.meta.url)), 'utf8')) as {
+  version: string;
+};
+
+const program = new Command();
+program.name('anvil-ops').description('Ops toolkit for AnvilWiki fork sites').version(pkg.version);
+
+program
+  .command('doctor')
+  .description('Check site config, env credentials, gh, GSC and CF access')
+  .action(async () => {
+    process.exitCode = await doctorCommand();
+  });
+
+program
+  .command('metrics')
+  .description('Pull GSC + Cloudflare Web Analytics metrics')
+  .option('--days <n>', 'lookback window in days', '28')
+  .option('--format <fmt>', 'output format: table | json | md', 'table')
+  .option('--source <s>', 'limit to gsc | cf | all', 'all')
+  .action(async (opts: { days: string; format: string; source: string }) => {
+    if (!['table', 'json', 'md'].includes(opts.format)) {
+      process.stderr.write(`Invalid --format "${opts.format}". Use table, json or md.\n`);
+      process.exitCode = 1;
+      return;
+    }
+    if (!['gsc', 'cf', 'all'].includes(opts.source)) {
+      process.stderr.write(`Invalid --source "${opts.source}". Use gsc, cf or all.\n`);
+      process.exitCode = 1;
+      return;
+    }
+    const days = Number(opts.days);
+    if (!Number.isInteger(days) || days < 1 || days > 365) {
+      process.stderr.write('--days must be an integer between 1 and 365.\n');
+      process.exitCode = 1;
+      return;
+    }
+    process.exitCode = await metricsCommand({
+      days,
+      format: opts.format as 'table' | 'json' | 'md',
+      source: opts.source as 'gsc' | 'cf' | 'all',
+    });
+  });
+
+program
+  .command('audit')
+  .description('Aggregate template checks (refresh-audit / check-i18n / check-content / check-links) into one report')
+  .action(async () => {
+    process.exitCode = await auditCommand();
+  });
+
+program
+  .command('insights')
+  .description('Data-driven action list: GSC x CF rules + stale codes pages')
+  .option('--days <n>', 'metrics lookback window in days', '28')
+  .action(async (opts: { days: string }) => {
+    const days = Number(opts.days);
+    if (!Number.isInteger(days) || days < 1 || days > 365) {
+      process.stderr.write('--days must be an integer between 1 and 365.\n');
+      process.exitCode = 1;
+      return;
+    }
+    process.exitCode = await insightsCommand({ days });
+  });
+
+program
+  .command('submit')
+  .description('Validate changes, then branch + commit + push + open a PR (never pushes main)')
+  .option('--title <t>', 'PR / commit title')
+  .option('--base <b>', 'PR base branch', 'main')
+  .action(async (opts: { title?: string; base?: string }) => {
+    process.exitCode = await submitCommand({ title: opts.title, base: opts.base });
+  });
+
+program
+  .command('mcp')
+  .description('Start the anvil-ops MCP server on stdio (for Claude / ZCode / other MCP clients)')
+  .action(async () => {
+    const { StdioServerTransport } = await import('@modelcontextprotocol/sdk/server/stdio.js');
+    const { buildServer } = await import('../mcp/server.js');
+    const server = buildServer({ cwd: process.cwd() });
+    await server.connect(new StdioServerTransport());
+  });
+
+program.parseAsync(process.argv).catch((e: unknown) => {
+  if (e instanceof OpsError) {
+    process.stderr.write(`Error: ${e.message}\nFix: ${e.fix}\n`);
+  } else {
+    process.stderr.write(`Error: ${String(e)}\n`);
+  }
+  process.exitCode = 1;
+});
