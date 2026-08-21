@@ -21,6 +21,7 @@ import TableOfContents from '~/components/article/TableOfContents.astro';
 import ShareButton from '~/components/article/ShareButton.astro';
 import BossStatCard from '~/components/article/BossStatCard.astro';
 import CodesTable from '~/components/article/CodesTable.astro';
+import ArticleCover from '~/components/article/ArticleCover.astro';
 import ArticleGallery from '~/components/article/ArticleGallery.astro';
 import BackToTop from '~/components/article/BackToTop.astro';
 import WikiSidebar from '~/components/sidebar/WikiSidebar.astro';
@@ -238,6 +239,15 @@ const jsonLd = [
         </span>
       </div>
     </header>
+
+    {entry.data.image && (
+      <ArticleCover
+        src={entry.data.image}
+        alt={`${entry.data.title} gameplay screenshot`}
+        class="mt-6 aspect-video w-full rounded-md border border-border object-cover shadow-sm"
+        sizes="(max-width: 1024px) 100vw, 768px"
+      />
+    )}
 
     {/* Quick Answer / TL;DR — answer-first for AI Overviews & featured snippets */}
     {summary && (
