@@ -58,6 +58,6 @@ PUBLIC_CF_BEACON_TOKEN = ""
 #PUBLIC_ADSENSE_SLOT_SIDEBAR = ""
 #PUBLIC_ADSENSE_SLOT_INCONTENT = ""
 # Google Analytics (consent-gated)
-#PUBLIC_GA_ID = ""
+PUBLIC_GA_ID = "G-4YE197ZD68"
 # Google Search Console verification meta token
 #PUBLIC_GSC_VERIFICATION = ""
