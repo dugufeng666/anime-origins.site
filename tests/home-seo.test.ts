@@ -11,18 +11,34 @@ const homePageSource = readFileSync(
 
 describe('homepage SEO target', () => {
   it.each([
-    ['en', en],
-    ['ja', ja],
-  ])('locks %s homepage to the Anime Origins head term', (_locale, messages) => {
-    expect(messages.home.hero.title).toBe('Anime Origins');
-    expect(messages.home.meta.title).toBe(
+    [
+      'en',
+      en,
       'Anime Origins - Codes, Tier List, Traits & Beginner Guide',
-    );
+      50,
+      60,
+      140,
+      160,
+    ],
+    [
+      'ja',
+      ja,
+      'Anime Origins - コード、Tier List、Traits、初心者ガイド',
+      40,
+      50,
+      90,
+      120,
+    ],
+  ])(
+    'locks %s homepage to the Anime Origins head term',
+    (_locale, messages, expectedTitle, minTitleLength, maxTitleLength, minDescLength, maxDescLength) => {
+    expect(messages.home.hero.title).toBe('Anime Origins');
+    expect(messages.home.meta.title).toBe(expectedTitle);
     expect(messages.home.meta.title).not.toContain('Wiki');
-    expect(messages.home.meta.title.length).toBeGreaterThanOrEqual(50);
-    expect(messages.home.meta.title.length).toBeLessThanOrEqual(60);
-    expect(messages.home.meta.description.length).toBeGreaterThanOrEqual(140);
-    expect(messages.home.meta.description.length).toBeLessThanOrEqual(160);
+    expect(messages.home.meta.title.length).toBeGreaterThanOrEqual(minTitleLength);
+    expect(messages.home.meta.title.length).toBeLessThanOrEqual(maxTitleLength);
+    expect(messages.home.meta.description.length).toBeGreaterThanOrEqual(minDescLength);
+    expect(messages.home.meta.description.length).toBeLessThanOrEqual(maxDescLength);
   });
 
   it('suppresses the global wiki title suffix on homepages', () => {

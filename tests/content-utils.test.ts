@@ -27,7 +27,20 @@ describe('parseEntryId', () => {
   });
 
   it('returns null when the locale segment is not a configured locale', () => {
-    expect(parseEntryId('fr/bosses/emberfang')).toBeNull();
+    expect(parseEntryId('es/bosses/emberfang')).toBeNull();
+  });
+
+  it('accepts all configured locales', () => {
+    expect(parseEntryId('fr/bosses/emberfang')).toEqual({
+      locale: 'fr',
+      category: 'bosses',
+      slug: 'emberfang',
+    });
+    expect(parseEntryId('pt/bosses/emberfang')).toEqual({
+      locale: 'pt',
+      category: 'bosses',
+      slug: 'emberfang',
+    });
   });
 
   it('returns null when there are fewer than 3 segments', () => {

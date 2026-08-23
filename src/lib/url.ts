@@ -10,6 +10,7 @@ import { siteUrl } from '~/config/site';
 
 /** Build a path with the locale prefix applied (or none for default locale). */
 export function localizePath(path: string, locale: Locale): string {
+  if (/^https?:\/\//i.test(path)) return path;
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   if (locale === defaultLocale) return cleanPath;
   // For the root path "/", avoid producing "/<locale>/" (trailing slash).

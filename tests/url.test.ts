@@ -26,6 +26,12 @@ describe('url helpers', () => {
       expect(localizePath('about', 'en')).toBe('/about');
       expect(localizePath('about', 'ja')).toBe('/ja/about');
     });
+
+    it('leaves absolute URLs untouched', () => {
+      expect(localizePath('https://anime-origins.site/guides/anime-origins-beginner-guide', 'fr')).toBe(
+        'https://anime-origins.site/guides/anime-origins-beginner-guide',
+      );
+    });
   });
 
   describe('homeUrl', () => {

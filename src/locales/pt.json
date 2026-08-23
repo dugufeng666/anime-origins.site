@@ -73,28 +73,28 @@
           "title": "Guia para Iniciantes",
           "description": "Comece pelo caminho inicial, pelas primeiras melhorias e pelo que liberar antes de gastar moeda valiosa.",
           "icon": "lucide:book-open",
-          "href": "/guides/anime-origins-beginner-guide"
+          "href": "https://anime-origins.site/guides/anime-origins-beginner-guide"
         },
         {
           "number": "2",
           "title": "Códigos de Anime Origins",
           "description": "Confira a tabela de recompensas antes de procurar qualquer outra coisa.",
           "icon": "lucide:gift",
-          "href": "/codes/anime-origins-codes"
+          "href": "https://anime-origins.site/codes/anime-origins-codes"
         },
         {
           "number": "3",
           "title": "Tier List de Anime Origins",
           "description": "Veja as páginas ranqueadas de unidades antes de gastar recursos no carry errado.",
           "icon": "lucide:list-ordered",
-          "href": "/units/anime-origins-tier-list"
+          "href": "https://anime-origins.site/units/anime-origins-tier-list"
         },
         {
           "number": "4",
           "title": "Wiki de Anime Origins",
           "description": "Abra o hub quando quiser o mapa mais rápido do site inteiro.",
           "icon": "lucide:book-marked",
-          "href": "/guides/anime-origins-wiki"
+          "href": "https://anime-origins.site/guides/anime-origins-wiki"
         }
       ]
     },
@@ -102,10 +102,10 @@
       "badge": "Em alta",
       "title": "Páginas de alta intenção",
       "quickLinks": [
-        { "label": "Unidades", "href": "/units/anime-origins-units" },
-        { "label": "Anime Origins Roblox", "href": "/guides/anime-origins-roblox" },
-        { "label": "Discord", "href": "/guides/anime-origins-discord" },
-        { "label": "Traits", "href": "/guides/anime-origins-traits" }
+        { "label": "Unidades", "href": "https://anime-origins.site/units/anime-origins-units" },
+        { "label": "Anime Origins Roblox", "href": "https://anime-origins.site/guides/anime-origins-roblox" },
+        { "label": "Discord", "href": "https://anime-origins.site/guides/anime-origins-discord" },
+        { "label": "Traits", "href": "https://anime-origins.site/guides/anime-origins-traits" }
       ]
     },
     "explore": {
