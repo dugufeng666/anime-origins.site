@@ -3,179 +3,179 @@
   "site": {
     "name": "Anime Origins Wiki",
     "shortName": "AO Wiki",
-    "description": "Anime Origins wiki with guides, codes, tier lists, units, and launch coverage.",
-    "tagline": "Fast Anime Origins pages for the first search window",
-    "legalNotice": "Anime Origins Wiki is a fan-made community site. Not affiliated with any game developer."
+    "description": "Anime Origins のガイド、コード、tier list、ユニット、traits、ローンチ情報をまとめた wiki です。",
+    "tagline": "最初の検索窓口で素早く答える Anime Origins ページ",
+    "legalNotice": "Anime Origins Wiki はファン制作のコミュニティサイトです。開発者とは無関係です。"
   },
   "nav": {
-    "home": "Home",
-    "guides": "Guides",
-    "codes": "Codes",
-    "units": "Units",
-    "events": "Events",
-    "toggleTheme": "Toggle theme",
-    "menu": "Menu",
-    "close": "Close",
-    "search": "Search",
-    "language": "Language"
+    "home": "ホーム",
+    "guides": "ガイド",
+    "codes": "コード",
+    "units": "ユニット",
+    "events": "イベント",
+    "toggleTheme": "テーマ切替",
+    "menu": "メニュー",
+    "close": "閉じる",
+    "search": "検索",
+    "language": "言語"
   },
   "search": {
-    "placeholder": "Search the wiki...",
-    "noResults": "No matches found"
+    "placeholder": "wiki を検索...",
+    "noResults": "一致するものはありません"
   },
   "shared": {
-    "lastUpdated": "Last updated",
-    "publishedOn": "Published",
-    "noArticles": "No articles yet. Check back soon!",
-    "relatedArticles": "Related Articles",
-    "onThisPage": "On this page",
-    "browseAll": "Browse all",
-    "viewAll": "View all",
-    "commentsHeading": "Comments",
-    "share": "Share",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "consentText": "We use cookies for analytics and ads to keep this site free.",
-    "accept": "Accept",
-    "decline": "Decline",
-    "consentTitle": "Cookies",
+    "lastUpdated": "最終更新",
+    "publishedOn": "公開日",
+    "noArticles": "記事はまだありません。しばらくしてからまた確認してください。",
+    "relatedArticles": "関連記事",
+    "onThisPage": "このページ",
+    "browseAll": "すべて見る",
+    "viewAll": "一覧を見る",
+    "commentsHeading": "コメント",
+    "share": "共有",
+    "copyLink": "リンクをコピー",
+    "copied": "コピーしました！",
+    "consentText": "このサイトを無料で運営するため、分析と広告に Cookie を使用します。",
+    "accept": "同意する",
+    "decline": "拒否する",
+    "consentTitle": "Cookie",
     "codesTable": {
-      "active": "Active Codes",
-      "expired": "Expired Codes",
-      "reward": "Reward",
-      "expires": "Expires",
-      "source": "Source",
-      "code": "Code"
+      "active": "有効コード",
+      "expired": "期限切れコード",
+      "reward": "報酬",
+      "expires": "期限",
+      "source": "出典",
+      "code": "コード"
     },
     "codesFaq": [
       {
-        "question": "How do I redeem codes?",
-        "answer": "Open the game, find the redeem or settings menu, paste the code exactly as shown, and confirm."
+        "question": "コードはどうやって入力しますか？",
+        "answer": "ゲームを開き、引き換えまたは設定メニューを見つけ、表示どおりにコードを貼り付けて確定します。"
       },
       {
-        "question": "Why do codes stop working?",
-        "answer": "Most codes expire on a schedule set by the developer or become one-time use after a patch window."
+        "question": "なぜコードは使えなくなりますか？",
+        "answer": "多くのコードは開発側の期限で失効するか、パッチ後に一度きりの扱いになります。"
       },
       {
-        "question": "How often are new codes released?",
-        "answer": "New codes often appear around updates, collabs, milestones, or launch events. Check the page after each major change."
+        "question": "新しいコードはどれくらいの頻度で出ますか？",
+        "answer": "更新、コラボ、節目、ローンチイベントの前後に出ることが多いです。大きな変化のたびに確認してください。"
       },
       {
-        "question": "Do codes expire?",
-        "answer": "Yes. Expiry is normal, so the active table should always be treated as the current snapshot."
+        "question": "コードは期限切れになりますか？",
+        "answer": "はい。期限切れは普通なので、有効表は常に最新スナップショットとして扱ってください。"
       }
     ],
-    "possiblyOutdated": "This guide was last checked on",
-    "outdatedNote": "— the game may have changed since. Some details could be out of date.",
-    "prevArticle": "Previous",
-    "nextArticle": "Next",
-    "minuteRead": "min read",
-    "wasThisHelpful": "Was this helpful?",
-    "feedbackThanks": "Thanks for the feedback!",
-    "relatedVideos": "Related videos",
-    "gallery": "Gallery",
-    "gameVersion": "Game version",
-    "allTags": "All Tags",
-    "tagsIndexDescription": "Browse all articles by topic.",
-    "articlesCount": "articles",
-    "recentTitle": "Recent Updates",
-    "recentDescription": "The latest articles and updates across the wiki, newest first.",
-    "sponsorTitle": "Support this wiki",
-    "sponsorText": "If these guides helped you, consider supporting the site.",
-    "sponsorButton": "Support us",
-    "notFoundSearchHint": "Try searching the wiki instead.",
-    "notFoundPopular": "Popular pages",
+    "possiblyOutdated": "このガイドの確認日:",
+    "outdatedNote": "— その後ゲームが変わっている可能性があります。内容の一部は古いかもしれません。",
+    "prevArticle": "前へ",
+    "nextArticle": "次へ",
+    "minuteRead": "分で読めます",
+    "wasThisHelpful": "役に立ちましたか？",
+    "feedbackThanks": "フィードバックありがとうございます！",
+    "relatedVideos": "関連動画",
+    "gallery": "ギャラリー",
+    "gameVersion": "ゲームバージョン",
+    "allTags": "すべてのタグ",
+    "tagsIndexDescription": "トピック別に記事を一覧できます。",
+    "articlesCount": "記事",
+    "recentTitle": "最近の更新",
+    "recentDescription": "wiki 全体の最新記事と更新を新しい順に表示します。",
+    "sponsorTitle": "この wiki を支援する",
+    "sponsorText": "ガイドが役に立ったら、サイトの支援を検討してください。",
+    "sponsorButton": "支援する",
+    "notFoundSearchHint": "代わりに wiki 内を検索してみてください。",
+    "notFoundPopular": "人気ページ",
     "galleryLabels": {
-      "close": "Close",
-      "prev": "Previous image",
-      "next": "Next image"
+      "close": "閉じる",
+      "prev": "前の画像",
+      "next": "次の画像"
     },
-    "quickAnswer": "Quick Answer",
-    "skipToContent": "Skip to content",
-    "tapToCopy": "Tap to copy",
-    "open": "Open",
-    "playVideo": "Play video",
-    "closeAd": "Close ad",
-    "adLabel": "Advertisement",
-    "codesFaqTitle": "Codes FAQ",
-    "toggleTheme": "Toggle theme",
-    "fallbackNotice": "English fallback",
-    "copyQuickAnswer": "Copy quick answer",
-    "feedbackYes": "Yes",
-    "feedbackNo": "No",
-    "breadcrumbAria": "Breadcrumb",
-    "paginationAria": "Article pagination"
+    "quickAnswer": "すぐ答え",
+    "skipToContent": "本文へ移動",
+    "tapToCopy": "タップでコピー",
+    "open": "開く",
+    "playVideo": "動画を再生",
+    "closeAd": "広告を閉じる",
+    "adLabel": "広告",
+    "codesFaqTitle": "コード FAQ",
+    "toggleTheme": "テーマ切替",
+    "fallbackNotice": "英語フォールバック",
+    "copyQuickAnswer": "要点をコピー",
+    "feedbackYes": "はい",
+    "feedbackNo": "いいえ",
+    "breadcrumbAria": "パンくず",
+    "paginationAria": "記事ページ送り"
   },
   "overview": {
     "guides": {
-      "overviewTitle": "All Guides",
-      "overviewDescription": "Beginner walkthroughs, wiki hubs, leveling tips, traits, and Discord / Roblox help for Anime Origins."
+      "overviewTitle": "ガイド一覧",
+      "overviewDescription": "Anime Origins の初心者向け手順、wiki ハブ、育成のヒント、traits、Discord / Roblox の案内。"
     },
     "codes": {
-      "overviewTitle": "All Codes",
-      "overviewDescription": "Active reward codes, redemption steps, and expired-code tracking for Anime Origins."
+      "overviewTitle": "コード一覧",
+      "overviewDescription": "Anime Origins の有効コード、入力手順、期限切れコードの管理。"
     },
     "units": {
-      "overviewTitle": "All Units & Tier Lists",
-      "overviewDescription": "Ranked units, secret-unit notes, best teams, and role-based tier lists for Anime Origins."
+      "overviewTitle": "ユニットと tier list",
+      "overviewDescription": "Anime Origins のユニット順位、シークレットユニット、最適編成、役割別 tier list。"
     },
     "events": {
-      "overviewTitle": "All Events",
-      "overviewDescription": "Patch events, collabs, launch spikes, and time-sensitive Anime Origins coverage."
+      "overviewTitle": "イベント一覧",
+      "overviewDescription": "パッチ、コラボ、ローンチの山、時事性のある Anime Origins 情報。"
     }
   },
   "home": {
     "meta": {
-      "title": "Anime Origins - Codes, Tier List, Traits & Beginner Guide",
-      "description": "Anime Origins guides for Roblox players, including active codes, unit tier lists, trait reroll advice, beginner progression, units, updates, and Discord links."
+      "title": "Anime Origins - コード、Tier List、Traits、初心者ガイド",
+      "description": "Roblox プレイヤー向けの Anime Origins ガイド。最新コード、ユニット tier list、traits の再抽選、初心者向け進行、ユニット、更新情報、Discord リンクをまとめています。"
     },
     "hero": {
-      "badge": "Roblox Tower Defense Guide",
+      "badge": "Roblox タワーディフェンスガイド",
       "title": "Anime Origins",
-      "description": "Find active codes, current unit rankings, trait reroll advice, beginner progression tips, and the latest Anime Origins updates.",
-      "ctaPrimary": "Play on Roblox",
-      "ctaSecondary": "Browse Guides"
+      "description": "有効コード、現在のユニット順位、traits の再抽選、初心者向け進行、最新アップデートをまとめて確認できます。",
+      "ctaPrimary": "Roblox で遊ぶ",
+      "ctaSecondary": "ガイドを見る"
     },
     "updates": {
-      "title": "Recent Updates"
+      "title": "最近の更新"
     },
     "start": {
-      "badge": "Start Here",
-      "title": "Pick a starting lane",
+      "badge": "ここから開始",
+      "title": "最初の入口を選ぶ",
       "cards": [
         {
           "number": "1",
-          "title": "Anime Origins Beginner Guide",
-          "description": "Start with the early-game path, first upgrades, and what to unlock before you spend hard currency.",
+          "title": "初心者ガイド",
+          "description": "序盤の進め方、最初の強化、貴重な通貨を使う前に開くべき要素を確認します。",
           "icon": "lucide:book-open",
           "href": "/guides/anime-origins-beginner-guide"
         },
         {
           "number": "2",
-          "title": "Anime Origins Codes",
-          "description": "Check the current reward table before you spend time searching anywhere else.",
+          "title": "Anime Origins コード",
+          "description": "他を探す前に、現在の報酬一覧を確認します。",
           "icon": "lucide:gift",
           "href": "/codes/anime-origins-codes"
         },
         {
           "number": "3",
           "title": "Anime Origins Tier List",
-          "description": "Check ranked unit pages before you spend resources or build a team around the wrong carry.",
+          "description": "リソースを使う前に、順位付きユニットページで間違いのない carry を確認します。",
           "icon": "lucide:list-ordered",
           "href": "/units/anime-origins-tier-list"
         },
         {
           "number": "4",
           "title": "Anime Origins Wiki",
-          "description": "Open the hub page when you want the fastest map of the whole site.",
+          "description": "サイト全体を最短で把握したいときは、このハブページを開きます。",
           "icon": "lucide:book-marked",
           "href": "/guides/anime-origins-wiki"
         }
       ]
     },
     "popular": {
-      "badge": "Trending Now",
-      "title": "High-Intent Pages",
+      "badge": "注目中",
+      "title": "高意図ページ",
       "quickLinks": [
         {
           "label": "Anime Origins Units",
@@ -196,8 +196,8 @@
       ]
     },
     "explore": {
-      "title": "Explore Anime Origins",
-      "description": "Pick the page type that matches the search intent and publish fast.",
+      "title": "Anime Origins を探す",
+      "description": "検索意図に合うページ種別を選び、素早く公開します。",
       "modules": [
         {
           "order": 1,
@@ -296,50 +296,50 @@
       ]
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "Quick answers for new visitors.",
+      "title": "よくある質問",
+      "description": "初めて来た人向けの簡単な回答です。",
       "items": [
         {
-          "question": "What is Anime Origins Wiki?",
-          "answer": "It is a fan-made wiki for Anime Origins, built to publish fast guide, code, unit, and event pages."
+          "question": "Anime Origins Wiki とは何ですか？",
+          "answer": "Anime Origins のためのファン制作 wiki で、ガイド、コード、ユニット、イベントのページを素早く公開するために作られています。"
         },
         {
-          "question": "Which game does it cover?",
-          "answer": "The current focus is Anime Origins, and the site is organized around guides, codes, units, traits, and launch pages."
+          "question": "どのゲームを扱っていますか？",
+          "answer": "現在の中心は Anime Origins で、ガイド、コード、ユニット、traits、ローンチページを軸に構成しています。"
         },
         {
-          "question": "How often do pages update?",
-          "answer": "The goal is to update high-intent pages quickly around new spikes, patches, and code drops."
+          "question": "どれくらいの頻度で更新されますか？",
+          "answer": "新しい山、パッチ、コード配布に合わせて、意図の強いページを素早く更新することを目指しています。"
         },
         {
-          "question": "Where should I start?",
-          "answer": "Start with the beginner guide, then move to codes, units, the wiki hub, and the Discord page."
+          "question": "どこから見ればいいですか？",
+          "answer": "初心者ガイドから始めて、コード、ユニット、wiki ハブ、Discord ページへ進むのがおすすめです。"
         },
         {
-          "question": "Is this official?",
-          "answer": "No. This is a fan-made wiki hub and is not affiliated with any game developer."
+          "question": "公式サイトですか？",
+          "answer": "いいえ。これはファン制作の wiki ハブで、開発元とは無関係です。"
         }
       ]
     },
     "closingCta": {
-      "title": "Keep Anime Origins focused",
-      "description": "Publish the next useful page, keep the search intent clean, and add a new cluster only when the signal justifies it.",
-      "primary": "Browse Guides"
+      "title": "Anime Origins を絞って育てる",
+      "description": "次に役立つページを公開し、検索意図を保ち、信号が十分なときだけ新しいクラスターを追加します。",
+      "primary": "ガイドを見る"
     }
   },
   "footer": {
-    "playGame": "Play on Roblox",
+    "playGame": "Roblox で遊ぶ",
     "officialDiscord": "Discord",
     "officialYoutube": "YouTube",
     "officialTwitter": "X",
     "officialReddit": "Reddit",
-    "about": "About",
+    "about": "概要",
     "faq": "FAQ",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "copyright": "Copyright",
-    "copyrightText": "© 2026 Anime Origins Wiki. Fan-made, not affiliated with any game developer.",
-    "community": "Community",
-    "legal": "Legal"
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "copyright": "著作権",
+    "copyrightText": "© 2026 Anime Origins Wiki。ファン制作であり、開発元とは無関係です。",
+    "community": "コミュニティ",
+    "legal": "法務"
   }
 }

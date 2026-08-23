@@ -11,7 +11,13 @@
 import ListPage from '~/components/article/ListPage.astro';
 import ArticlePage from '~/components/article/ArticlePage.astro';
 import { CONTENT_TYPES } from '~/config/navigation';
-import { isLocale, defaultLocale, locales, type Locale } from '~/i18n/routing';
+import {
+  articleFallbackLocales,
+  isLocale,
+  defaultLocale,
+  locales,
+  type Locale,
+} from '~/i18n/routing';
 import { getEntryWithFallback, localesForEntry, parseEntryId, type ResolvedEntry } from '~/lib/content';
 import { detailPath, languageAlternates, listPath } from '~/lib/url';
 
@@ -44,16 +50,19 @@ export async function getStaticPaths() {
       paths.push({ params: { locale, slug: `${parsed.category}/${parsed.slug}` } });
     }
 
-    // Also generate paths for English articles so fallback works at request
-    // time (e.g. /ja/bosses/stormcaller where ja version doesn't exist).
-    for (const entry of published) {
-      const parsed = parseEntryId(entry.id);
-      if (!parsed || parsed.locale !== defaultLocale) continue;
-      const slugStr = `${parsed.category}/${parsed.slug}`;
-      // Avoid duplicate params (if same slug exists in both locales).
-      const exists = paths.some((p) => p.params.locale === locale && p.params.slug === slugStr);
-      if (!exists) {
-        paths.push({ params: { locale, slug: slugStr } });
+    // Some locales are intentionally allowed to fall back to English for a
+    // migration window. New locales should only generate article paths when
+    // an actual translation exists, otherwise we would ship duplicate English
+    // pages under multiple locale prefixes.
+    if (articleFallbackLocales.includes(locale as (typeof articleFallbackLocales)[number])) {
+      for (const entry of published) {
+        const parsed = parseEntryId(entry.id);
+        if (!parsed || parsed.locale !== defaultLocale) continue;
+        const slugStr = `${parsed.category}/${parsed.slug}`;
+        const exists = paths.some((p) => p.params.locale === locale && p.params.slug === slugStr);
+        if (!exists) {
+          paths.push({ params: { locale, slug: slugStr } });
+        }
       }
     }
   }

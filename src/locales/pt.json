@@ -1,0 +1,122 @@
+{
+  "site": {
+    "name": "Anime Origins Wiki",
+    "shortName": "AO Wiki",
+    "description": "Wiki de Anime Origins com guias, códigos, tier lists, unidades, traits e cobertura de lançamento.",
+    "tagline": "Páginas rápidas de Anime Origins para a primeira janela de busca",
+    "legalNotice": "Anime Origins Wiki é um site comunitário feito por fãs. Não é afiliado a nenhum desenvolvedor."
+  },
+  "nav": {
+    "home": "Início",
+    "guides": "Guias",
+    "codes": "Códigos",
+    "units": "Unidades",
+    "events": "Eventos",
+    "toggleTheme": "Alternar tema",
+    "menu": "Menu",
+    "close": "Fechar",
+    "search": "Buscar",
+    "language": "Idioma"
+  },
+  "shared": {
+    "quickAnswer": "Resposta rápida",
+    "browseAll": "Ver tudo",
+    "viewAll": "Ver todos",
+    "minuteRead": "min de leitura",
+    "share": "Compartilhar",
+    "copyLink": "Copiar link",
+    "copied": "Copiado!",
+    "skipToContent": "Pular para o conteúdo",
+    "feedbackYes": "Sim",
+    "feedbackNo": "Não",
+    "fallbackNotice": "Fallback em inglês"
+  },
+  "overview": {
+    "guides": {
+      "overviewTitle": "Todos os guias",
+      "overviewDescription": "Tutoriais iniciais, hubs de wiki, dicas de progressão, traits e ajuda de Discord / Roblox para Anime Origins."
+    },
+    "codes": {
+      "overviewTitle": "Todos os códigos",
+      "overviewDescription": "Códigos ativos, passos de resgate e controle de códigos expirados para Anime Origins."
+    },
+    "units": {
+      "overviewTitle": "Unidades e tier lists",
+      "overviewDescription": "Unidades ranqueadas, notas de unidades secretas, melhores times e tier lists por função para Anime Origins."
+    },
+    "events": {
+      "overviewTitle": "Todos os eventos",
+      "overviewDescription": "Patches, collabs, picos de lançamento e cobertura temporal de Anime Origins."
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Anime Origins - Códigos, Tier List, Traits e Guia para Iniciantes",
+      "description": "Guias de Anime Origins para jogadores de Roblox, incluindo códigos ativos, tier lists de unidades, dicas de reroll de traits, progressão inicial, unidades, atualizações e links do Discord."
+    },
+    "hero": {
+      "badge": "Guia Roblox Tower Defense",
+      "title": "Anime Origins",
+      "description": "Encontre códigos ativos, rankings de unidades, dicas de reroll de traits, progressão inicial e as últimas atualizações de Anime Origins.",
+      "ctaPrimary": "Jogar no Roblox",
+      "ctaSecondary": "Ver Guias"
+    },
+    "updates": {
+      "title": "Atualizações recentes"
+    },
+    "start": {
+      "badge": "Comece aqui",
+      "title": "Escolha um caminho inicial",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guia para Iniciantes",
+          "description": "Comece pelo caminho inicial, pelas primeiras melhorias e pelo que liberar antes de gastar moeda valiosa.",
+          "icon": "lucide:book-open",
+          "href": "/guides/anime-origins-beginner-guide"
+        },
+        {
+          "number": "2",
+          "title": "Códigos de Anime Origins",
+          "description": "Confira a tabela de recompensas antes de procurar qualquer outra coisa.",
+          "icon": "lucide:gift",
+          "href": "/codes/anime-origins-codes"
+        },
+        {
+          "number": "3",
+          "title": "Tier List de Anime Origins",
+          "description": "Veja as páginas ranqueadas de unidades antes de gastar recursos no carry errado.",
+          "icon": "lucide:list-ordered",
+          "href": "/units/anime-origins-tier-list"
+        },
+        {
+          "number": "4",
+          "title": "Wiki de Anime Origins",
+          "description": "Abra o hub quando quiser o mapa mais rápido do site inteiro.",
+          "icon": "lucide:book-marked",
+          "href": "/guides/anime-origins-wiki"
+        }
+      ]
+    },
+    "popular": {
+      "badge": "Em alta",
+      "title": "Páginas de alta intenção",
+      "quickLinks": [
+        { "label": "Unidades", "href": "/units/anime-origins-units" },
+        { "label": "Anime Origins Roblox", "href": "/guides/anime-origins-roblox" },
+        { "label": "Discord", "href": "/guides/anime-origins-discord" },
+        { "label": "Traits", "href": "/guides/anime-origins-traits" }
+      ]
+    },
+    "explore": {
+      "title": "Explorar Anime Origins",
+      "description": "Escolha o tipo de página que combina com a intenção da busca e publique rápido."
+    },
+    "closingCta": {
+      "title": "Publique a próxima página útil",
+      "description": "Mantenha a intenção limpa, siga o sinal e só abra um novo cluster quando houver motivo.",
+      "primary": "Ver guias",
+      "secondary": "Abrir Discord"
+    }
+  }
+}

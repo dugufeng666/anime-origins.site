@@ -13,16 +13,26 @@
  * This is configured in astro.config.ts via `i18n.routing.prefixDefaultLocale: false`.
  */
 
-export const locales = ['en', 'ja'] as const;
+export const locales = ['en', 'ja', 'pt', 'fr'] as const;
 
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'en';
 
+/**
+ * Locales that currently have partial wiki article fallback support.
+ * Only these locales are allowed to inherit English article paths during
+ * static generation. New locales should be added here only when we are
+ * intentionally shipping fallback duplicates for a migration window.
+ */
+export const articleFallbackLocales = ['ja'] as const;
+
 /** English label for each locale (used in language switcher). */
 export const LOCALE_LABELS: Record<Locale, string> = {
   en: 'English',
   ja: '日本語',
+  pt: 'Português',
+  fr: 'Français',
 };
 
 /**
@@ -36,6 +46,8 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 export const OG_LOCALE_MAP: Record<string, string> = {
   en: 'en_US',
   ja: 'ja_JP',
+  pt: 'pt_BR',
+  fr: 'fr_FR',
   zh: 'zh_CN',
 };
 
