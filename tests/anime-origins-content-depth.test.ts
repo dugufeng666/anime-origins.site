@@ -12,6 +12,9 @@ const wikiHubPath = fileURLToPath(
 const beginnerGuidePath = fileURLToPath(
   new URL('../src/content/wiki/en/guides/anime-origins-beginner-guide.mdx', import.meta.url),
 );
+const codesPath = fileURLToPath(
+  new URL('../src/content/wiki/en/codes/anime-origins-codes.mdx', import.meta.url),
+);
 const ptCodesPath = fileURLToPath(
   new URL('../src/content/wiki/pt/codes/anime-origins-codes.mdx', import.meta.url),
 );
@@ -45,6 +48,19 @@ describe('Anime Origins content depth', () => {
     expect(beginnerGuide).toContain('## What to spend first');
     expect(beginnerGuide).toContain('## Shop value');
     expect(beginnerGuide).toContain('## Common mistakes');
+  });
+
+  it('adds freshness and source boundaries to both codes pages', () => {
+    const codes = readFileSync(codesPath, 'utf8');
+    const ptCodes = readFileSync(ptCodesPath, 'utf8');
+
+    expect(codes).toContain('## Status and freshness');
+    expect(codes).toContain('Last checked: 2026-08-26');
+    expect(codes).toContain('## Source boundary');
+    expect(codes).toContain('listed as active');
+    expect(ptCodes).toContain('## Status e atualização');
+    expect(ptCodes).toContain('Última verificação: 2026-08-26');
+    expect(ptCodes).toContain('## Limite da fonte');
   });
 
   it('points the Portuguese homepage codes card at the localized article', () => {
