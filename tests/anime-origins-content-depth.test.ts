@@ -23,7 +23,10 @@ describe('Anime Origins content depth', () => {
     expect(tierList).toContain("title: 'Anime Origins Tier List Wiki'");
     expect(tierList).toContain('## Quick Answer');
     expect(tierList).toContain('## How this ranking is built');
+    expect(tierList).toContain('## Choose by mode');
+    expect(tierList).toContain('## Role slots');
     expect(tierList).toContain('## Starter teams');
+    expect(tierList).toContain('## Starter team templates');
   });
 
   it('adds a decision map to the wiki hub', () => {
