@@ -9,6 +9,9 @@ const tierListPath = fileURLToPath(
 const wikiHubPath = fileURLToPath(
   new URL('../src/content/wiki/en/guides/anime-origins-wiki.mdx', import.meta.url),
 );
+const beginnerGuidePath = fileURLToPath(
+  new URL('../src/content/wiki/en/guides/anime-origins-beginner-guide.mdx', import.meta.url),
+);
 const ptCodesPath = fileURLToPath(
   new URL('../src/content/wiki/pt/codes/anime-origins-codes.mdx', import.meta.url),
 );
@@ -30,6 +33,15 @@ describe('Anime Origins content depth', () => {
     expect(wikiHub).toContain('codes');
     expect(wikiHub).toContain('tier list');
     expect(wikiHub).toContain('traits');
+  });
+
+  it('turns the beginner guide into an actionable progression page', () => {
+    const beginnerGuide = readFileSync(beginnerGuidePath, 'utf8');
+
+    expect(beginnerGuide).toContain('## 30-minute opening plan');
+    expect(beginnerGuide).toContain('## What to spend first');
+    expect(beginnerGuide).toContain('## Shop value');
+    expect(beginnerGuide).toContain('## Common mistakes');
   });
 
   it('points the Portuguese homepage codes card at the localized article', () => {
