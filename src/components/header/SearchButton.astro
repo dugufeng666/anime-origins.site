@@ -447,7 +447,7 @@ const placeholder = search.placeholder ?? 'Search...';
               showImages: false,
               showEmptyFilters: false,
               // Pagefind maps dist/<dir>/index.html → "/<dir>/" (trailing slash).
-              // The site uses trailingSlash:'never', so those URLs 404 on click.
+              // Normalize through shared helpers so search URLs follow site routing.
               // Strip the trailing slash from every result URL before render.
               processResult: (result) => {
                 if (result?.url) {

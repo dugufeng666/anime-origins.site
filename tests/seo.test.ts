@@ -43,7 +43,7 @@ describe('SEO helpers', () => {
       expect(json.headline).toBe('Test Article');
       expect(json.datePublished).toContain('2026-01-01');
       expect(json.image).toMatch(/^https?:\/\//);
-      expect(json.mainEntityOfPage['@id']).toMatch(/\/bosses\/test-slug$/);
+      expect(json.mainEntityOfPage['@id']).toMatch(/\/bosses\/test-slug\/$/);
     });
 
     it('uses dateModified when provided, otherwise falls back to datePublished', () => {

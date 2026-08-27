@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import pt from '../src/locales/pt.json';
+import fr from '../src/locales/fr.json';
 
 const tierListPath = fileURLToPath(
   new URL('../src/content/wiki/en/units/anime-origins-tier-list.mdx', import.meta.url),
@@ -17,6 +18,12 @@ const codesPath = fileURLToPath(
 );
 const ptCodesPath = fileURLToPath(
   new URL('../src/content/wiki/pt/codes/anime-origins-codes.mdx', import.meta.url),
+);
+const ptTierListPath = fileURLToPath(
+  new URL('../src/content/wiki/pt/units/anime-origins-tier-list.mdx', import.meta.url),
+);
+const frCodesPath = fileURLToPath(
+  new URL('../src/content/wiki/fr/codes/anime-origins-codes.mdx', import.meta.url),
 );
 
 describe('Anime Origins content depth', () => {
@@ -55,16 +62,23 @@ describe('Anime Origins content depth', () => {
     const ptCodes = readFileSync(ptCodesPath, 'utf8');
 
     expect(codes).toContain('## Status and freshness');
-    expect(codes).toContain('Last checked: 2026-08-26');
+    expect(codes).toContain('Last checked: 2026-08-27');
     expect(codes).toContain('## Source boundary');
     expect(codes).toContain('listed as active');
     expect(ptCodes).toContain('## Status e atualização');
-    expect(ptCodes).toContain('Última verificação: 2026-08-26');
+    expect(ptCodes).toContain('Última verificação: 2026-08-27');
     expect(ptCodes).toContain('## Limite da fonte');
   });
 
   it('points the Portuguese homepage codes card at the localized article', () => {
     expect(pt.home.start.cards[1].href).toBe('/codes/anime-origins-codes');
+  });
+
+  it('points localized homepages at localized articles that now exist', () => {
+    expect(pt.home.start.cards[2].href).toBe('/units/anime-origins-tier-list');
+    expect(pt.home.start.cards[3].href).toBe('/guides/anime-origins-wiki');
+    expect(fr.home.start.cards[1].href).toBe('/codes/anime-origins-codes');
+    expect(fr.home.start.cards[3].href).toBe('/guides/anime-origins-wiki');
   });
 
   it('adds a real Portuguese codes article', () => {
@@ -74,5 +88,26 @@ describe('Anime Origins content depth', () => {
     expect(ptCodes).toContain('## O que esta página faz');
     expect(ptCodes).toContain('## Como resgatar');
     expect(ptCodes).toContain('## Onde encontrar novos códigos');
+  });
+
+  it('adds query-routing copy for the latest wiki searches', () => {
+    const wikiHub = readFileSync(wikiHubPath, 'utf8');
+
+    expect(wikiHub).toContain('## Search query map');
+    expect(wikiHub).toContain('anime origns');
+    expect(wikiHub).toContain('codes anime origins');
+    expect(wikiHub).toContain('origin codes');
+  });
+
+  it('adds focused Portuguese and French pages for visible country signals', () => {
+    const ptTierList = readFileSync(ptTierListPath, 'utf8');
+    const frCodes = readFileSync(frCodesPath, 'utf8');
+
+    expect(ptTierList).toContain("title: 'Anime Origins Tier List'");
+    expect(ptTierList).toContain('## Resposta rápida');
+    expect(ptTierList).toContain('## Como escolher por modo');
+    expect(frCodes).toContain("title: 'Codes Anime Origins'");
+    expect(frCodes).toContain('## Réponse rapide');
+    expect(frCodes).toContain('## Comment utiliser les codes');
   });
 });

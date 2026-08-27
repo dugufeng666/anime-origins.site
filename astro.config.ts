@@ -9,6 +9,12 @@ import * as path from 'node:path';
 import { locales, defaultLocale } from './src/i18n/routing';
 import { landingLinkEnabled } from './src/config/project';
 
+function canonicalSitemapPath(pagePath: string): string {
+  if (pagePath === '/' || pagePath.endsWith('/')) return pagePath;
+  if (/\.[A-Za-z0-9]+$/.test(pagePath)) return pagePath;
+  return `${pagePath}/`;
+}
+
 /**
  * Build a map of page path → lastmod ISO date, read from MDX frontmatter
  * (`lastModified` falling back to `date`). Used by the sitemap `serialize`
@@ -50,7 +56,9 @@ function buildLastmodMap(noindexPaths: Set<string>): Map<string, string> {
       const rel = path.relative(base, p).replace(/\.mdx$/, '');
       const [loc, cat, ...rest] = rel.split(path.sep);
       const slugPath = rest.join('/');
-      const articlePath = loc === defaultLocale ? `/${cat}/${slugPath}` : `/${loc}/${cat}/${slugPath}`;
+      const articlePath = canonicalSitemapPath(
+        loc === defaultLocale ? `/${cat}/${slugPath}` : `/${loc}/${cat}/${slugPath}`,
+      );
       if (/^noindex:\s*true\s*$/m.test(fm)) {
         noindexPaths.add(articlePath);
         // The non-default-locale routes of a default-locale noindex article
@@ -62,14 +70,14 @@ function buildLastmodMap(noindexPaths: Set<string>): Map<string, string> {
           for (const l of locales) {
             if (l === defaultLocale) continue;
             const translated = path.join(base, l, cat, ...rest) + '.mdx';
-            if (!fs.existsSync(translated)) noindexPaths.add(`/${l}${articlePath}`);
+            if (!fs.existsSync(translated)) noindexPaths.add(canonicalSitemapPath(`/${l}${articlePath}`));
           }
         }
       }
       map.set(articlePath, date.toISOString());
 
       // List pages: newest article in the category wins.
-      const listPath = loc === defaultLocale ? `/${cat}` : `/${loc}/${cat}`;
+      const listPath = canonicalSitemapPath(loc === defaultLocale ? `/${cat}` : `/${loc}/${cat}`);
       const existing = map.get(listPath);
       if (!existing || existing < date.toISOString()) {
         map.set(listPath, date.toISOString());
@@ -117,7 +125,7 @@ const lastmodMap = buildLastmodMap(noindexPaths);
 export default defineConfig({
   site: process.env.SITE_URL || 'https://anime-origins.site',
   output: 'static',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   image: {
     // Emit explicit width/height on responsive <Image> output to prevent CLS.
     responsiveStyles: true,
@@ -146,8 +154,8 @@ export default defineConfig({
       // noindex articles stay out of the sitemap (self-contradictory signal
       // otherwise — the page asks not to be indexed while the sitemap submits it).
       filter: (url) => {
-        const pathname = decodeURIComponent(new URL(url).pathname);
-        if (!landingLinkEnabled && (pathname === '/landing' || pathname.startsWith('/landing/') || pathname === '/zh/landing' || pathname.startsWith('/zh/landing/'))) {
+        const pathname = canonicalSitemapPath(decodeURIComponent(new URL(url).pathname));
+        if (!landingLinkEnabled && (pathname === '/landing/' || pathname.startsWith('/landing/') || pathname === '/zh/landing/' || pathname.startsWith('/zh/landing/'))) {
           return false;
         }
         return !noindexPaths.has(pathname);
@@ -158,7 +166,7 @@ export default defineConfig({
           // Decode: non-ASCII slugs (CJK filenames) come percent-encoded in
           // item.url, while lastmodMap keys are raw filesystem names —
           // without decoding the lookup silently misses.
-          const pagePath = decodeURIComponent(new URL(item.url).pathname);
+          const pagePath = canonicalSitemapPath(decodeURIComponent(new URL(item.url).pathname));
           const lm = lastmodMap.get(pagePath);
           if (lm) item.lastmod = lm;
         } catch {

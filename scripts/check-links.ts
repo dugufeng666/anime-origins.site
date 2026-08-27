@@ -40,7 +40,7 @@ const htmlFiles: string[] = [];
   }
 })(DIST);
 
-/** Existing site paths (site is trailingSlash:'never'). "/bosses/x" → exists
+/** Existing site paths (site is trailingSlash:'always'). "/bosses/x/" → exists
  *  if dist/bosses/x/index.html or dist/bosses/x.html exists. */
 const knownPaths = new Set<string>(['/']);
 for (const file of htmlFiles) {

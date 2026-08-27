@@ -8,15 +8,21 @@
 import { defaultLocale, isLocale, type Locale } from '~/i18n/routing';
 import { siteUrl } from '~/config/site';
 
+function withTrailingSlash(path: string): string {
+  const [pagePath = '/', suffix = ''] = path.match(/^([^?#]*)(.*)$/)?.slice(1) ?? [path, ''];
+  if (pagePath === '/' || pagePath.endsWith('/') || /\.[A-Za-z0-9]+$/.test(pagePath)) {
+    return `${pagePath}${suffix}`;
+  }
+  return `${pagePath}/${suffix}`;
+}
+
 /** Build a path with the locale prefix applied (or none for default locale). */
 export function localizePath(path: string, locale: Locale): string {
   if (/^https?:\/\//i.test(path)) return path;
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  if (locale === defaultLocale) return cleanPath;
-  // For the root path "/", avoid producing "/<locale>/" (trailing slash).
-  // The site uses trailingSlash: 'never', so "/ja/" would 404.
-  if (cleanPath === '/') return `/${locale}`;
-  return `/${locale}${cleanPath}`;
+  if (locale === defaultLocale) return withTrailingSlash(cleanPath);
+  if (cleanPath === '/') return `/${locale}/`;
+  return withTrailingSlash(`/${locale}${cleanPath}`);
 }
 
 /** Build an absolute URL (with domain) for a path + locale. */
